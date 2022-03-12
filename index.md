@@ -1,0 +1,70 @@
+---
+layout: default
+title: "侯马网站建设_小程序开发公司 - 超纳网络"
+keywords: "侯马网站建设,网站制作,小程序开发"
+description: "山西超纳网络科技有限公司，专业从事企业网站建设、网络推广7年，专注企业营销型网站建设、响应式网站制作、微信企业小程序开发、微信商城小程序开发、百度智能小程序开发。"
+---
+
+<!-- section portfolio -->
+<section id="works" class="portfolio with-line">
+
+	<div class="container">
+		
+		<!-- section header -->
+		<div class="section-header">
+			<span class="back-text">Blog</span>
+			<h2>博客文章</h2>
+			<span class="line"></span>
+		</div>
+		
+		<!-- portfolio filter (desktop) -->
+		<ul class="portfolio-filter">
+			<li class="current" data-filter=""><a href="/blog/">All</a></li>
+			{% for category in site.categories %}
+			<li data-filter=""><a href="{{ category | first }}/">{{ category | first }}</a></li>
+			{% endfor %}
+		</ul>
+		
+		<!-- portfolio filter (mobile) -->
+		<select class="portfolio-filter-mobile">
+			<option value="*"><a href="/blog/">All</a></option>
+			{% for category in site.categories %}
+			<option value=""><a href="{{ category | first }}/">{{ category | first }}</a></option>
+			{% endfor %}
+		</select>
+		
+		<!-- portolio wrapper -->
+		<div class="row portfolio-wrapper wow slideInUp">
+			<!-- 循环输出最新的10条 -->
+			{% for post in site.posts offset:0 limit:10 %} 
+			<!-- portfolio item -->
+			<div class="col-sm-4 video">
+				<div class="portfolio-item text-center">
+					<div class="thumb">
+						<div class="icons">
+							<a href="static/file/portfolio-1-full.jpg" class="portfolio-image" data-effect="mfp-move-horizontal">
+								<i class="icon-size-fullscreen fullscreen"></i>
+							</a>
+							<a href="single-portfolio.html">
+								<i class="icon-link link"></i>
+							</a>
+						</div>
+						<img src="static/picture/portfolio-1.jpg" alt="Portfolio-title">
+						<div class="mask"></div>
+					</div>
+					<h4 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+					<span class="term">Video</span>
+				</div>
+			</div>
+			{% endfor %}
+			
+		</div>
+		
+		<!-- more button -->
+		<div class="more-button text-center">
+			<a href="/blog/" class="btn btn-outline">更多博文</a>
+		</div>
+
+	</div>
+	
+</section>
