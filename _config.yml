@@ -13,4 +13,3 @@ paginate_path: "blog/page:num"
 subtitle: "刘凯"
 
 highlighter: rouge
-theme: jekyll-theme-architect
