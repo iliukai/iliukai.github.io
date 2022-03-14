@@ -1,83 +1,34 @@
 {% include header.html %}
 
-<!-- portfolio header -->
-<section class="portfolio-header text-center" data-image-src="images/portfolio/portfolio-4-full.jpg" data-stellar-background-ratio="0.5">
-	
-	<div class="container">
-		
-		<!-- title -->
-		<h1 class="title">{{ page.title }}</h1>
-		
-		<!-- meta data -->
-		<ul class="portfolio-meta">
-			<li>Branding</li>
-			<li>{{ page.date | date: "%Y-%m-%d" }}</li>
-		</ul>
-
-	</div>
-
-	<div class="mask"></div>
-
-</section>
-
 <!-- section portfolio content -->
 <section class="portfolio-content with-line text-center">
+	<!-- title -->
+		<h1 class="title">{{ page.title }}</h1>
+		<p>{{ page.date | date: "%Y-%m-%d" }}</p>
 
-	<div class="container">
+	<div class="container text-left">
 
 		{{ content }}
 		
 		<!-- related portfolio -->
 		<div class="portfolio-related">
-
-			<!-- section header -->
-			<div class="section-header">
-				<span class="back-text">Portfolio</span>
-				<h2>Related Works</h2>
-				<span class="line"></span>
-			</div>
-
 			<div class="row">
 				{% if page.previous %}
 				<!-- portfolio item -->
-				<div class="col-sm-4 video">
-					<div class="portfolio-item text-center">
-						<div class="thumb">
-							<div class="icons">
-								<a href="/static/file/portfolio-1-full.jpg" class="portfolio-image" data-effect="mfp-move-horizontal">
-									<i class="icon-size-fullscreen fullscreen"></i>
-								</a>
-								<a href="">
-									<i class="icon-link link"></i>
-								</a>
-							</div>
-							<img src="/static/picture/portfolio-1.jpg" alt="Portfolio-title">
-							<div class="mask"></div>
-						</div>
+				<div class="col-sm-6">
+					<div class="portfolio-item text-left">
+						<span class="term">上一篇</span>
 						<h4 class="title"><a href="{{ page.previous.url }}">{{ page.previous.title | truncatewords:5 }}</a></h4>
-						<span class="term">Video</span>
 					</div>
 				</div>
 				{% endif %}
 
 				{% if page.next %}
 				<!-- portfolio item -->
-				<div class="col-sm-4 photography">
+				<div class="col-sm-6">
 					<div class="portfolio-item text-center">
-						<div class="thumb">
-							<div class="icons">
-								<a href="/static/file/portfolio-2-full.jpg" class="portfolio-image" data-effect="mfp-move-horizontal">
-									<i class="icon-size-fullscreen fullscreen"></i>
-								</a>
-								<a href="">
-									<i class="icon-link link"></i>
-								</a>
-							</div>
-							<img src="/static/picture/portfolio-2.jpg" alt="Portfolio-title">
-							<div class="mask"></div>
-						</div>
+						<span class="term">下一篇</span>
 						<h4 class="title"><a href="{{ page.next.url }}">{{ page.next.title | truncatewords:5 }}</a></h4>
-						<span class="term">Photography</span>
 					</div>
 				</div>
 				{% endif %}
