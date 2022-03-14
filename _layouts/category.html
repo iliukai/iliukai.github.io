@@ -32,7 +32,7 @@
 		
 		<!-- portolio wrapper -->
 		<div class="row portfolio-wrapper wow slideInUp">
-			{% for post in paginator.posts %}  
+			{% for post in site.categories.[page.category] %}
 			<!-- portfolio item -->
 			<div class="col-sm-4 video">
 				<div class="portfolio-item text-center">
@@ -49,7 +49,7 @@
 						<div class="mask"></div>
 					</div>
 					<h4 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-					<span class="term">Video</span>
+					<span class="term">{{ page.category }}</span>
 				</div>
 			</div>
 			{% endfor %}
