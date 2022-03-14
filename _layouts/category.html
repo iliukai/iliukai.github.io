@@ -18,7 +18,7 @@
 		<ul class="portfolio-filter">
 			<li class="current" data-filter=""><a href="/blog/">All</a></li>
 			{% for category in site.categories %}
-			<li data-filter=""><a href="{{ category | first }}/">{{ category | first }}</a></li>
+			<li data-filter=""><a href="/{{ category | first }}/">{{ category | first }}</a></li>
 			{% endfor %}
 		</ul>
 		
@@ -26,7 +26,7 @@
 		<select class="portfolio-filter-mobile">
 			<option value="*"><a href="/blog/">All</a></option>
 			{% for category in site.categories %}
-			<option value=""><a href="{{ category | first }}/">{{ category | first }}</a></option>
+			<option value=""><a href="/{{ category | first }}/">{{ category | first }}</a></option>
 			{% endfor %}
 		</select>
 		
@@ -38,14 +38,14 @@
 				<div class="portfolio-item text-center">
 					<div class="thumb">
 						<div class="icons">
-							<a href="static/file/portfolio-1-full.jpg" class="portfolio-image" data-effect="mfp-move-horizontal">
+							<a href="/static/file/portfolio-1-full.jpg" class="portfolio-image" data-effect="mfp-move-horizontal">
 								<i class="icon-size-fullscreen fullscreen"></i>
 							</a>
 							<a href="single-portfolio.html">
 								<i class="icon-link link"></i>
 							</a>
 						</div>
-						<img src="static/picture/portfolio-1.jpg" alt="Portfolio-title">
+						<img src="/static/picture/portfolio-1.jpg" alt="Portfolio-title">
 						<div class="mask"></div>
 					</div>
 					<h4 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
@@ -63,7 +63,7 @@
 				<!-- 分页代码 -->
 				{% if paginator.previous_page %}
 				<li class="page-item">
-					<a class="page-link" href="{{ paginator.previous_page_path }}" aria-label="Previous">
+					<a class="page-link" href="/{{ paginator.previous_page_path }}" aria-label="Previous">
 						<span aria-hidden="true">&laquo;</span>
 						<span class="sr-only">Previous</span>
 					</a>
@@ -79,7 +79,7 @@
 
 				{% if paginator.next_page %}
 				<li class="page-item">
-					<a class="page-link" href="{{ paginator.next_page_path }}" aria-label="Next">
+					<a class="page-link" href="/{{ paginator.next_page_path }}" aria-label="Next">
 						<span aria-hidden="true">&raquo;</span>
 						<span class="sr-only">Next</span>
 					</a>
