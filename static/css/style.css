@@ -170,6 +170,7 @@ header.over {
   position: fixed;
   width: 100%;
   z-index: 2;
+  background-color: #000;
 }
 header.over .horizontal-menu {
   text-align: center;
