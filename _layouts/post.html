@@ -11,8 +11,18 @@
 		{{ content }}
 
 		<div class="text-center">
-			<img src="static/picture/customer-1.jpg" alt="Portfolio-title">
+			<img src="/static/picture/customer-1.jpg" alt="Portfolio-title">
 		</div>
+
+		<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+		<div id="vcomments"></div>
+	    <script>
+	        new Valine({
+	            el: '#vcomments',
+	            appId: 'V9MN4Tp9wnnsYf2u3m60hXAA-gzGzoHsz',
+	            appKey: '6jegzQcCsxRBhiJRWcJFiJeV'
+	        })
+	    </script>
 		
 		<!-- related portfolio -->
 		<div class="portfolio-related">
