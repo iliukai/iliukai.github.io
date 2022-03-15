@@ -9,6 +9,10 @@
 	<div class="container text-left">
 
 		{{ content }}
+
+		<div class="text-center">
+			<img src="static/picture/customer-1.jpg" alt="Portfolio-title">
+		</div>
 		
 		<!-- related portfolio -->
 		<div class="portfolio-related">
@@ -26,7 +30,7 @@
 				{% if page.next %}
 				<!-- portfolio item -->
 				<div class="col-sm-6">
-					<div class="portfolio-item text-center">
+					<div class="portfolio-item text-left">
 						<span class="term">下一篇</span>
 						<h4 class="title"><a href="{{ page.next.url }}">{{ page.next.title | truncatewords:5 }}</a></h4>
 					</div>
